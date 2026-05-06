@@ -46,9 +46,9 @@ function Createproject(){
     return(
         <div className="flex flex-col items-center justify-start p-10">
             <h1 className="text-2xl font-bold text-gray-800 mb-6">Create Project</h1>
-            <form className="bg-white shadow-md rounded-lg p-8 w-[400px] flex flex-col gap-4" action = "#" method = "POST">
+            <form className="bg-white shadow-md rounded-lg p-8 w-[400px] flex flex-col gap-4" onSubmit={sendData}>
                 <input className="border-b-2 border-[#654585] outline-none px-2 py-2 text-lg w-full" type = "text" name = "projectname" id = "pjt-name" placeholder="Projct Name"/>
-                <input className="bg-[#654585] text-white py-2 rounded-lg cursor-pointer hover:brightness-110 transition-all duration-200 mt-2" type = "submit" id = "submit-btn" onClick={sendData}/>
+                <input className="bg-[#654585] text-white py-2 rounded-lg cursor-pointer hover:brightness-110 transition-all duration-200 mt-2" type = "submit" id = "submit-btn"/>
             </form>
         </div>
     );

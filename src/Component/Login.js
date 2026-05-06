@@ -42,6 +42,7 @@ function Login(){
 
         let response = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/login', {
             method: 'POST',
+            credentials: 'include',
             body : JSON.stringify(data),
             headers: {
                 'Content-Type': 'application/json'

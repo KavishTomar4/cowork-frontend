@@ -5,7 +5,7 @@
             "headers": [
                 {
                     "key": "Content-Security-Policy",
-                    "value": "script-src 'self' 'unsafe-eval' 'unsafe-inline'; default-src *"
+                    "value": "default-src * blob: data: 'unsafe-inline' 'unsafe-eval'"
                 }
             ]
         }

@@ -7,7 +7,7 @@ function Yourproject(){
 
         let fetchData = async()=>{
 
-            let response = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/getproject');
+            let response = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/getproject', {credentials: 'include'});
             
             if(response.ok){
                 let json = await response.json();

@@ -15,6 +15,7 @@ function Createproject(){
 
         let response = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/createproject', {
             method: 'POST',
+            credentials: 'include',
             body : JSON.stringify(data),
             headers: {
                 'Content-Type': 'application/json'

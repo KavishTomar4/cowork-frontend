@@ -8,10 +8,13 @@ function Createproject(){
     let sendData =  async(e)=>{
 
         e.preventDefault();
+        console.log('1. Submit clicked')
 
         let data = {
             name : document.getElementById('pjt-name').value 
         }
+        
+        console.log('2. Project name:', data.name)
 
         let response = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/createproject', {
             method: 'POST',
@@ -23,6 +26,8 @@ function Createproject(){
         
         });
 
+          console.log('3. Response:', response)
+
         if(response.ok){ 
             let json = await response.json();
             navigate(json.toLink, {
@@ -32,6 +37,8 @@ function Createproject(){
                     content: json.content
                 }
             });
+
+             console.log('4. JSON:', json)
         }
 
     }

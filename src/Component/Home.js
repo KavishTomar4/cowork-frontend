@@ -8,10 +8,27 @@ import Joinproject from "./Joinproject";
 
 function Home(){
 
-    let location = useLocation();
-    let username = location.state?.username || '';
+    let [username, setUsername] = useState('');
     let [currentPage, setCurrentPage] = useState('yourproject');
     let navigate = useNavigate();
+
+     // Fetch username from backend
+    useEffect(()=>{
+        let fetchUser = async()=>{
+            let response = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/getlogin', {
+                credentials: 'include' 
+            });
+            if(response.ok){
+                let json = await response.json();
+                if(json.toLink === '/') {
+                    navigate('/');  
+                } else {
+                    setUsername(json.username);
+                }
+            }
+        }
+        fetchUser();
+    }, [])
 
     let renderPage = () => {
         if(currentPage === 'yourproject') return <Yourproject/>
@@ -20,7 +37,7 @@ function Home(){
     }
     let logout = async()=>{
 
-            let response = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/logout');
+            let response = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/logout', {credentials: 'include'});
 
             if(response.ok){
                 let json = await response.json();

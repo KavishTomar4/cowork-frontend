@@ -8,7 +8,7 @@ function Login(){
     useEffect(()=>{
 
         let fetchData = async()=>{
-            let data = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/getlogin');
+            let data = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/getlogin', {credentials: 'include'});
             
 
             if(data.ok){

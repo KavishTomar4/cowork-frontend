@@ -10,7 +10,7 @@ function Login(){
         let fetchData = async()=>{
             let token = localStorage.getItem('cowork');
             if(!token) return;
-            let data = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/getlogin', {
+            let data = await fetch('https://cowork-backend-5nzc.onrender.com/api/getlogin', {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             if(data.ok){
@@ -26,7 +26,7 @@ function Login(){
         let username = document.getElementById('username').value;
         let password = document.getElementById('password').value;
 
-        let response = await fetch('https://cowork-backend-indol.vercel.app/api/login', {
+        let response = await fetch('https://cowork-backend-5nzc.onrender.com/api/login', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
             headers: { 'Content-Type': 'application/json' }

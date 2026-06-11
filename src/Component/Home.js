@@ -14,7 +14,7 @@ function Home(){
         let fetchUser = async()=>{
             let token = localStorage.getItem('cowork');
             if(!token) { navigate('/'); return; }
-            let response = await fetch('https://cowork-backend-indol.vercel.app/api/getlogin', {
+            let response = await fetch('https://cowork-backend-5nzc.onrender.com/api/getlogin', {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             if(response.ok){

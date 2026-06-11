@@ -12,7 +12,7 @@ function Register(){
         let username = document.getElementById('username').value;
         let password = document.getElementById('password').value;
 
-        let response = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/register', {
+        let response = await fetch('https://cowork-backend-indol.vercel.app/api/register', {
             method: 'POST',
             body: JSON.stringify({ email, username, password }),
             headers: { 'Content-Type': 'application/json' }

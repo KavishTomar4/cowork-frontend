@@ -10,7 +10,7 @@ function Yourproject(){
         let fetchData = async()=>{
             let token = localStorage.getItem('cowork');
             if(!token) { navigate('/'); return; }
-            let response = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/getproject', {
+            let response = await fetch('https://cowork-backend-indol.vercel.app/api/getproject', {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             if(response.ok){

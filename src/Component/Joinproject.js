@@ -12,7 +12,7 @@ function Joinproject(){
 
         let data = { code: document.getElementById('pjt-code').value }
 
-        let response = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/joinproject', {
+        let response = await fetch('https://cowork-backend-indol.vercel.app/api/joinproject', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {

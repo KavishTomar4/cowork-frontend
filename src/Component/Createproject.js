@@ -12,7 +12,7 @@ function Createproject(){
 
         let data = { name: document.getElementById('pjt-name').value }
 
-        let response = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/createproject', {
+        let response = await fetch('https://cowork-backend-indol.vercel.app/api/createproject', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {

@@ -26,7 +26,7 @@ function Login(){
         let username = document.getElementById('username').value;
         let password = document.getElementById('password').value;
 
-        let response = await fetch('https://cowork-backend-production-a22d.up.railway.app/api/login', {
+        let response = await fetch('https://cowork-backend-indol.vercel.app/api/login', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
             headers: { 'Content-Type': 'application/json' }
